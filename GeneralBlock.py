@@ -2,8 +2,8 @@ import torch.nn as nn
 from SelfAttention import SelfAttention
 
 # This class contains the basic transformer block having attention and feed forward network
-class GeneralBlock(nn.module):
-    def __init__(self, embed_size, attention_heads, dropout, ff_exp):
+class GeneralBlock(nn.Module):
+    def __init__(self, embed_size, attention_heads, ff_exp, dropout):
         super(GeneralBlock, self).__init__()
         self.attention = SelfAttention(embed_size, attention_heads)
         # Initialize layer normalization
